@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecommerce_etl"
+version = "0.1.0"
+description = "ETL pipeline: PostgreSQL -> pandas -> S3 (parquet, partycjonowane wg daty)"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "boto3",
+    "pyarrow",
+    "numpy",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "moto"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
