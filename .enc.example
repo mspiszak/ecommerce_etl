@@ -1,0 +1,15 @@
+# --- PostgreSQL (źródło danych) ---
+DB_HOST=
+DB_PORT=5432
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+
+# --- AWS / S3 (Data Lake docelowy) ---
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=eu-central-1
+S3_BUCKET=
+
+# --- Pipeline ---
+LOG_LEVEL=INFO
